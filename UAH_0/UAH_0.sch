@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:UAH_0-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
@@ -22,17 +23,6 @@ F 1 "модуль_arduino_nano" H 5300 1950 50  0000 C CNN
 F 2 "N_A:Arduino_nano" H 5650 2350 50  0001 C CNN
 F 3 "" H 5650 2350 50  0001 C CNN
 	1    4800 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L elements_2020:Драйвер_FET-IGBT_IR2103STRPBF DD1
-U 1 1 5F2F1BBD
-P 8550 4850
-F 0 "DD1" H 9250 4950 50  0000 C CNN
-F 1 "Драйвер_FET-IGBT_IR2103STRPBF" H 9200 4450 50  0000 C CNN
-F 2 "N_DD:SO-8" H 8550 4850 50  0001 C CNN
-F 3 "" H 8550 4850 50  0001 C CNN
-	1    8550 4850
 	1    0    0    -1  
 $EndComp
 $Comp
