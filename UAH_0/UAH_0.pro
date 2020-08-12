@@ -1,4 +1,4 @@
-update=09.08.2020 0:40:46
+update=12.08.2020 23:53:59
 version=1
 last_client=kicad
 [general]
@@ -239,7 +239,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=20A_MAX
 Clearance=0.4
-TrackWidth=6
+TrackWidth=4.5
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
