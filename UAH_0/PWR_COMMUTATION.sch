@@ -75,20 +75,6 @@ Wire Wire Line
 	6700 2350 6700 2750
 Wire Wire Line
 	6700 3400 6700 3600
-$Comp
-L elements_2020:Диод_VS-20ETS08S-M3 VD2
-U 1 1 5F3CB26D
-P 3400 2800
-AR Path="/5F33B5F7/5F3CB26D" Ref="VD2"  Part="1" 
-AR Path="/5F48FE9A/5F3CB26D" Ref="VD7"  Part="1" 
-AR Path="/5F495C51/5F3CB26D" Ref="VD12"  Part="1" 
-F 0 "VD2" H 3644 2996 50  0000 L CNN
-F 1 "Диод_VS-20ETS08S-M3" H 3644 2905 50  0000 L CNN
-F 2 "N_VD_HL:Транзистор_N-канал_dpak" H 3725 2600 50  0001 C CNN
-F 3 "" V 3400 2700 50  0001 C CNN
-	1    3400 2800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3500 2500 3500 1000
 Wire Wire Line
@@ -410,11 +396,7 @@ Text Label 5000 6600 2    50   ~ 0
 15V
 Wire Wire Line
 	4250 6600 4500 6600
-Wire Wire Line
-	4500 6300 5000 6300
 Connection ~ 4500 6300
-Wire Wire Line
-	4500 6000 5000 6000
 Connection ~ 4500 6000
 Text Label 5000 6000 2    50   ~ 0
 CHANNEL_1
@@ -589,4 +571,75 @@ Wire Wire Line
 	9200 4100 9200 4250
 Wire Wire Line
 	8200 2600 8200 4750
+$Comp
+L MOTOR_2020_import:Резистор_10_кОм±5%_0,1Вт R?
+U 1 1 5F3734C7
+P 5500 7100
+AR Path="/5F3734C7" Ref="R?"  Part="1" 
+AR Path="/5F33B5F7/5F3734C7" Ref="R19"  Part="1" 
+AR Path="/5F48FE9A/5F3734C7" Ref="R21"  Part="1" 
+AR Path="/5F495C51/5F3734C7" Ref="R23"  Part="1" 
+F 0 "R19" V 5850 6950 60  0000 C CNN
+F 1 "Резистор_10_кОм±5%_0,1Вт" H 5825 6875 60  0001 C CNN
+F 2 "MOTOR_RLC:Резистор_SMD_0603-0,075_Вт" H 5350 6775 60  0001 C CNN
+F 3 "${MOTOR_2020_LIB}\\documentation\\Р1-12_СП.pdf" H 5800 7100 60  0001 C CNN
+F 4 "10 кОм" V 5700 6850 50  0000 C CNN "INFO"
+F 5 "https://www.chipdip.ru/product0/65097" H 5750 7350 50  0001 C CNN "LINK"
+	1    5500 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MOTOR_2020_import:Резистор_10_кОм±5%_0,1Вт R?
+U 1 1 5F3761F0
+P 6250 7100
+AR Path="/5F3761F0" Ref="R?"  Part="1" 
+AR Path="/5F33B5F7/5F3761F0" Ref="R20"  Part="1" 
+AR Path="/5F48FE9A/5F3761F0" Ref="R22"  Part="1" 
+AR Path="/5F495C51/5F3761F0" Ref="R24"  Part="1" 
+F 0 "R20" V 6600 6950 60  0000 C CNN
+F 1 "Резистор_10_кОм±5%_0,1Вт" H 6575 6875 60  0001 C CNN
+F 2 "MOTOR_RLC:Резистор_SMD_0603-0,075_Вт" H 6100 6775 60  0001 C CNN
+F 3 "${MOTOR_2020_LIB}\\documentation\\Р1-12_СП.pdf" H 6550 7100 60  0001 C CNN
+F 4 "10 кОм" V 6450 6850 50  0000 C CNN "INFO"
+F 5 "https://www.chipdip.ru/product0/65097" H 6500 7350 50  0001 C CNN "LINK"
+	1    6250 7100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 6300 5500 6500
+Wire Wire Line
+	4500 6300 5500 6300
+Wire Wire Line
+	6250 6000 6250 6500
+Wire Wire Line
+	4500 6000 6250 6000
+Wire Wire Line
+	5500 7100 5500 7250
+Wire Wire Line
+	5500 7250 6250 7250
+Wire Wire Line
+	6250 7250 6250 7100
+$Comp
+L elements_2020:Check_point X14
+U 1 1 5F37E3A2
+P 5150 4250
+AR Path="/5F33B5F7/5F37E3A2" Ref="X14"  Part="1" 
+AR Path="/5F48FE9A/5F37E3A2" Ref="X15"  Part="1" 
+AR Path="/5F495C51/5F37E3A2" Ref="X16"  Part="1" 
+F 0 "X14" H 5150 4350 50  0000 C CNN
+F 1 "Check_point" H 5150 4150 50  0000 C CNN
+F 2 "N_X:Пробник" H 5150 4250 50  0001 C CNN
+F 3 "" H 5150 4250 50  0001 C CNN
+	1    5150 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4250 4700 4250
+Connection ~ 4700 4250
+Wire Wire Line
+	5300 4250 6000 4250
+Text Label 6000 4250 2    50   ~ 0
+PULL_DOWN
+Text Label 6000 7250 2    50   ~ 0
+PULL_DOWN
 $EndSCHEMATC

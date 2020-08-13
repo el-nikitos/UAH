@@ -1,4 +1,4 @@
-update=12.08.2020 23:53:59
+update=13.08.2020 22:41:54
 version=1
 last_client=kicad
 [general]
@@ -12,6 +12,16 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=PDF/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -240,8 +250,8 @@ dPairViaGap=0.25
 Name=20A_MAX
 Clearance=0.4
 TrackWidth=4.5
-ViaDiameter=0.8
-ViaDrill=0.4
+ViaDiameter=1.2
+ViaDrill=0.8
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2
