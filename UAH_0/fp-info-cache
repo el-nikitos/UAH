@@ -1,267 +1,113 @@
-60349516247573
-MOTOR_RLC
-SMD_потенциометр_Р1-207
+25262834745813
+N_ICO
+ClimateGuard_10x12
 
 
 0
-3
-3
-MOTOR_RLC
-VAR_vr_13
+0
+0
+N_ICO
+ClimateGuard_13x18
 
 
 0
-2
-2
-MOTOR_RLC
-Варистор ВР-13а
+0
+0
+N_ICO
+ClimateGuard_QR_7x7
 
 
 0
-2
-2
-MOTOR_RLC
-Вставка_плавкая_ВП2Б-1В(10А,250В)
+0
+0
+N_ICO
+ClimateGuard_QR_10x10
 
 
 0
-4
-2
-MOTOR_RLC
-Дроссель_ДФ15-А27
+0
+0
+N_ICO
+El-nikitos_QR_10x10
 
 
 0
-5
-4
-MOTOR_RLC
-Дроссель_ДФК120-2Р
+0
+0
+N_ICO
+el-nikitos_19x7
 
 
 0
-8
-4
-MOTOR_RLC
-КОРПУС_4(D)
+0
+0
+N_ICO
+el-nikitos_29x10
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_12х10
+0
+0
+N_ICO
+el-nikitos_43x15
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD(0805)
+0
+0
+N_ICO
+ing-plus_5x5
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_0805
+0
+0
+N_ICO
+ing-plus_13x13
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_1206
+0
+0
+N_ICO
+ing-plus_22x22
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_1210
+0
+0
+N_ICO
+instagram_3x3
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_1812
+0
+0
+N_ICO
+ni_10x10
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_2220
+0
+0
+N_ICO
+skyer_19x4
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_К10-83(0603)
+0
+0
+N_ICO
+skyer_25x5
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_SMD_К10-83(1206)
+0
+0
+N_ICO
+trinity_32x10
 
 
 0
-2
-2
-MOTOR_RLC
-Конденсатор_К10-82-4,7
-
-
 0
-2
-2
-MOTOR_RLC
-Конденсатор_К15-20
-
-
 0
-2
-2
-MOTOR_RLC
-Конденсатор_К15-20в
-
-
-0
-2
-2
-MOTOR_RLC
-Конденсатор_К52-23_125В_220
-
-
-0
-2
-2
-MOTOR_RLC
-Конденсатор_для_трансформатора
-
-
-0
-2
-2
-MOTOR_RLC
-Конденсатор_тантал_SMD_m3216
-Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
-capacitor tantalum
-0
-2
-2
-MOTOR_RLC
-Конденсатор_тантал_SMD_m3528
-Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
-capacitor tantalum
-0
-2
-2
-MOTOR_RLC
-Конденсатор_тантал_SMD_m7343
-Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
-capacitor tantalum
-0
-2
-2
-MOTOR_RLC
-Конденсатор_тантал_SMD_m7343H
-Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
-capacitor tantalum
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_0,063_(0603)
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_2Вт(4020)
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_0603-0,075_Вт
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_0805_0,125Вт
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_0805_0,125Вт(БЕЗ_ШЕЛКА)
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_1206-0,25_Вт
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_2010-0,5_Вт
-
-
-0
-2
-2
-MOTOR_RLC
-Резистор_SMD_2512-1,0_Вт
-
-
-0
-2
-2
-MOTOR_RLC
-Резонатор_РК206АА_корпус_DP-26
-
-
-0
-4
-2
-MOTOR_RLC
-Резонатор_РК456МДУ(DIP)
-
-
-0
-2
-2
-MOTOR_RLC
-Терморезистор_ТР-1-15
-
-
-0
-2
-2
-MOTOR_RLC
-ТрС-ЛС5
-
-
-0
-12
-12
-MOTOR_RLC
-Чип-индуктивность_SMD_0805
-
-
-0
-2
-2
