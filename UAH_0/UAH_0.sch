@@ -720,9 +720,9 @@ F 3 "" H 925 8775 60  0001 C CNN
 	1    1500 8500
 	1    0    0    -1  
 $EndComp
-Text Label 1500 8500 2    50   ~ 0
+Text Label 1500 9750 2    50   ~ 0
 D_IN_3
-Text Label 1500 8650 2    50   ~ 0
+Text Label 1500 9900 2    50   ~ 0
 D_IN_4
 $Comp
 L elements_2020:Клеммник_х2_KLS2-300-5.00-02P-2S XT4
@@ -752,9 +752,9 @@ F 3 "" H 925 10025 60  0001 C CNN
 	1    1500 9750
 	1    0    0    -1  
 $EndComp
-Text Label 1500 9750 2    50   ~ 0
+Text Label 1500 8500 2    50   ~ 0
 D_IN_5
-Text Label 1500 9900 2    50   ~ 0
+Text Label 1500 8650 2    50   ~ 0
 D_IN_6
 $Comp
 L MOTOR_2020_components:Резистор_Р1-12-0,1_ум.-240_Ом±5%-Н-«А» R1
@@ -935,9 +935,9 @@ Wire Wire Line
 	3250 9250 3250 9000
 Text Label 3200 9250 2    50   ~ 0
 0(12V)_MC
-Text Label 3250 8250 2    50   ~ 0
+Text Label 3250 9500 2    50   ~ 0
 MC_DIN_3
-Text Label 3200 8750 2    50   ~ 0
+Text Label 3200 10000 2    50   ~ 0
 MC_DIN_4
 Connection ~ 2750 8750
 Wire Wire Line
@@ -1028,10 +1028,8 @@ Wire Wire Line
 	3250 10500 3250 10250
 Text Label 3200 10500 2    50   ~ 0
 0(12V)_MC
-Text Label 3250 9500 2    50   ~ 0
+Text Label 3250 8250 2    50   ~ 0
 MC_DIN_5
-Text Label 3200 10000 2    50   ~ 0
-MC_DIN_6
 Connection ~ 2750 10000
 Wire Wire Line
 	2750 10000 3200 10000
@@ -1484,7 +1482,7 @@ Text Label 7250 3950 0    50   ~ 0
 MC_DIN_1
 Text Label 7250 3800 0    50   ~ 0
 MC_DIN_2
-Text Label 7250 3200 0    50   ~ 0
+Text Label 7250 3500 0    50   ~ 0
 MC_DIN_4
 Wire Wire Line
 	7250 3200 8000 3200
@@ -1522,13 +1520,13 @@ Wire Wire Line
 	7250 3650 8000 3650
 Wire Wire Line
 	7250 3500 8000 3500
-Text Label 7250 3500 0    50   ~ 0
+Text Label 7250 3200 0    50   ~ 0
 MC_DIN_6
-Text Label 7250 3650 0    50   ~ 0
+Text Label 7250 3350 0    50   ~ 0
 MC_DIN_5
 Wire Wire Line
 	7250 3800 8000 3800
-Text Label 7250 3350 0    50   ~ 0
+Text Label 7250 3650 0    50   ~ 0
 MC_DIN_3
 Wire Wire Line
 	10000 3800 9400 3800
@@ -1607,4 +1605,6 @@ Wire Wire Line
 	9000 5700 8500 5700
 NoConn ~ 8500 5800
 NoConn ~ 8500 7300
+Text Label 3200 8750 2    50   ~ 0
+MC_DIN_6
 $EndSCHEMATC
