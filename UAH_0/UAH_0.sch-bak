@@ -65,9 +65,9 @@ U 1 1 5F3038AE
 P 8000 1650
 F 0 "C15" V 7980 1738 60  0000 L CNN
 F 1 "Конденсатор_16В_10_мкФ+-10проц." H 7950 1400 60  0001 C CNN
-F 2 "MOTOR_RLC:Конденсатор_SMD_0805" H 7900 1500 60  0001 C CNN
+F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 7900 1500 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 8000 1650 60  0001 C CNN
-F 4 "10 мкФ" V 8078 1738 50  0000 L CNN "INFO"
+F 4 "1 мкФ" V 8078 1738 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product/grm21br61c106ke15l" H 7875 1900 50  0001 C CNN "LINK"
 	1    8000 1650
 	0    1    1    0   
@@ -382,7 +382,7 @@ U 1 1 5F41EA69
 P 4750 3750
 F 0 "C8" V 4700 3800 60  0000 L CNN
 F 1 "Конденсатор_16В_10_мкФ+-10проц." H 4700 3500 60  0001 C CNN
-F 2 "MOTOR_RLC:Конденсатор_SMD_0805" H 4650 3600 60  0001 C CNN
+F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 4650 3600 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 4750 3750 60  0001 C CNN
 F 4 "10 мкФ" V 4850 3800 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product/grm21br61c106ke15l" H 4625 4000 50  0001 C CNN "LINK"
@@ -1044,35 +1044,35 @@ Wire Wire Line
 $Comp
 L elements_2020:Диод_VS-20ETS08S-M3 VD?
 U 1 1 5F3B01BC
-P 9900 1800
+P 9400 1550
 AR Path="/5F33B5F7/5F3B01BC" Ref="VD?"  Part="1" 
 AR Path="/5F48FE9A/5F3B01BC" Ref="VD?"  Part="1" 
 AR Path="/5F495C51/5F3B01BC" Ref="VD?"  Part="1" 
 AR Path="/5F3B01BC" Ref="VD2"  Part="1" 
-F 0 "VD2" H 10144 1996 50  0000 L CNN
-F 1 "Диод_VS-20ETS08S-M3" H 10144 1905 50  0000 L CNN
-F 2 "N_VD_HL:Транзистор_N-канал_dpak" H 10225 1600 50  0001 C CNN
-F 3 "" V 9900 1700 50  0001 C CNN
-	1    9900 1800
+F 0 "VD2" H 9644 1746 50  0000 L CNN
+F 1 "Диод_VS-20ETS08S-M3" H 9644 1655 50  0000 L CNN
+F 2 "N_VD_HL:Транзистор_N-канал_dpak" H 9725 1350 50  0001 C CNN
+F 3 "" V 9400 1450 50  0001 C CNN
+	1    9400 1550
 	1    0    0    -1  
 $EndComp
-Text Label 10000 2250 0    50   ~ 0
+Text Label 9500 2000 0    50   ~ 0
 PWR_COMMON
-Text Label 10000 1250 0    50   ~ 0
+Text Label 9500 1000 0    50   ~ 0
 12V_FU
 Wire Wire Line
-	10000 1250 10000 1500
+	9500 1000 9500 1250
 Wire Wire Line
-	9900 1800 9900 2000
+	9400 1550 9400 1750
 Wire Wire Line
-	9900 2000 10000 2000
+	9400 1750 9500 1750
 Wire Wire Line
-	10100 2000 10100 1800
+	9600 1750 9600 1550
 Wire Wire Line
-	10000 2000 10000 2250
-Connection ~ 10000 2000
+	9500 1750 9500 2000
+Connection ~ 9500 1750
 Wire Wire Line
-	10000 2000 10100 2000
+	9500 1750 9600 1750
 $Comp
 L elements_2020:Check_point X?
 U 1 1 5F3AD9C9
@@ -1113,8 +1113,6 @@ Wire Wire Line
 	6000 11000 6500 11000
 Wire Wire Line
 	8500 6250 8100 6250
-Text Label 8500 6250 2    50   ~ 0
-5V_MC
 Wire Wire Line
 	7000 6250 7500 6250
 Text Label 7000 6250 0    50   ~ 0
@@ -1137,7 +1135,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 5800 7250 5800
 Wire Wire Line
-	6000 5500 7250 5500
+	6000 5500 7000 5500
 Text Label 6500 5600 0    50   ~ 0
 DRIVE_MC_1
 Wire Wire Line
@@ -1145,16 +1143,13 @@ Wire Wire Line
 Wire Wire Line
 	6000 5500 6000 5600
 Wire Wire Line
-	8500 5800 9000 5800
-Text Label 9000 5800 2    50   ~ 0
+	8500 5600 9000 5600
+Text Label 9000 5600 2    50   ~ 0
 DRIVE_1
 Text Label 6500 5800 0    50   ~ 0
 0(12V)_MC
 Text Label 6250 5500 0    50   ~ 0
 15V_MOSFET
-NoConn ~ 8500 5500
-NoConn ~ 8500 5700
-NoConn ~ 8500 5600
 $Comp
 L MOTOR_2020_import:Конденсатор_16В_0.1_мкФ+-10проц. C?
 U 1 1 5F364F7C
@@ -1198,7 +1193,7 @@ F 0 "C14" V 3480 5238 60  0000 L CNN
 F 1 "Конденсатор_16В_10_мкФ+-10проц." H 3450 4900 60  0001 C CNN
 F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 3400 5000 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 3500 5150 60  0001 C CNN
-F 4 "1 мкФ" V 3578 5238 50  0000 L CNN "INFO"
+F 4 "10 мкФ" V 3578 5238 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product/grm21br61c106ke15l" H 3375 5400 50  0001 C CNN "LINK"
 	1    3500 5150
 	0    1    1    0   
@@ -1225,7 +1220,7 @@ F 0 "C11" V 2480 5238 60  0000 L CNN
 F 1 "Конденсатор_16В_0.1_мкФ+-10проц." H 2450 4900 60  0001 C CNN
 F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 2400 5000 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 2500 5150 60  0001 C CNN
-F 4 "1 мкФ" V 2578 5238 50  0000 L CNN "INFO"
+F 4 "10 мкФ" V 2578 5238 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product0/9000591947" H 2375 5400 50  0001 C CNN "LINK"
 	1    2500 5150
 	0    1    1    0   
@@ -1244,8 +1239,6 @@ Text Label 3000 5000 2    50   ~ 0
 3V3
 Wire Wire Line
 	8500 7750 8100 7750
-Text Label 8500 7750 2    50   ~ 0
-5V_MC
 Wire Wire Line
 	7000 7750 7500 7750
 Text Label 7000 7750 0    50   ~ 0
@@ -1268,7 +1261,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 7300 7250 7300
 Wire Wire Line
-	6000 7000 7250 7000
+	6000 7000 7000 7000
 Text Label 6500 7100 0    50   ~ 0
 DRIVE_MC_2
 Wire Wire Line
@@ -1276,16 +1269,13 @@ Wire Wire Line
 Wire Wire Line
 	6000 7000 6000 7100
 Wire Wire Line
-	8500 7300 9000 7300
-Text Label 9000 7300 2    50   ~ 0
+	8500 7100 9000 7100
+Text Label 9000 7100 2    50   ~ 0
 DRIVE_2
 Text Label 6500 7300 0    50   ~ 0
 0(12V)_MC
 Text Label 6250 7000 0    50   ~ 0
 15V_MOSFET
-NoConn ~ 8500 7000
-NoConn ~ 8500 7200
-NoConn ~ 8500 7100
 $Comp
 L MOTOR_2020_import:Конденсатор_16В_0.1_мкФ+-10проц. C?
 U 1 1 5F6D5F89
@@ -1308,19 +1298,6 @@ Wire Wire Line
 	7000 7200 7000 7100
 Wire Wire Line
 	7250 7200 7000 7200
-$Comp
-L elements_2020:Драйвер_FET-IGBT_IR2103STRPBF DD2
-U 1 1 5F6D5F79
-P 7250 7000
-AR Path="/5F6D5F79" Ref="DD2"  Part="1" 
-AR Path="/5F33B5F7/5F6D5F79" Ref="DD?"  Part="1" 
-F 0 "DD2" H 7950 7100 50  0000 C CNN
-F 1 "Драйвер_FET-IGBT_IR2103STRPBF" H 7900 6600 50  0000 C CNN
-F 2 "N_DD:SO-8" H 7250 7000 50  0001 C CNN
-F 3 "" H 7250 7000 50  0001 C CNN
-	1    7250 7000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7000 9900 7000 10250
 Wire Wire Line
@@ -1453,9 +1430,9 @@ U 1 1 5F3027BF
 P 6500 1650
 F 0 "C13" V 6480 1738 60  0000 L CNN
 F 1 "Конденсатор_16В_10_мкФ+-10проц." H 6450 1400 60  0001 C CNN
-F 2 "MOTOR_RLC:Конденсатор_SMD_0805" H 6400 1500 60  0001 C CNN
+F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 6400 1500 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 6500 1650 60  0001 C CNN
-F 4 "10 мкФ" V 6578 1738 50  0000 L CNN "INFO"
+F 4 "1 мкФ" V 6578 1738 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product/grm21br61c106ke15l" H 6375 1900 50  0001 C CNN "LINK"
 	1    6500 1650
 	0    1    1    0   
@@ -1499,12 +1476,133 @@ Wire Wire Line
 Wire Wire Line
 	6500 11000 9000 11000
 Connection ~ 6500 11000
-Text Label 10000 3800 2    50   ~ 0
-DRIVE_MC_2
 Text Label 10000 4100 2    50   ~ 0
 DRIVE_MC_1
 Wire Wire Line
-	10000 3800 9400 3800
-Wire Wire Line
 	9400 4100 10000 4100
+Text Label 7250 3950 0    50   ~ 0
+MC_DIN_1
+Text Label 7250 3800 0    50   ~ 0
+MC_DIN_2
+Text Label 7250 3200 0    50   ~ 0
+MC_DIN_4
+Wire Wire Line
+	7250 3200 8000 3200
+Wire Wire Line
+	7250 3350 8000 3350
+Wire Wire Line
+	7250 3950 8000 3950
+Text Label 11000 1750 0    50   ~ 0
+MOTOR_1_SPIN_1
+Wire Wire Line
+	11750 1750 11000 1750
+Text Label 11000 2000 0    50   ~ 0
+MOTOR_1_SPIN_2
+Wire Wire Line
+	11750 2000 11000 2000
+Text Label 11000 4000 0    50   ~ 0
+MOTOR_2_SPIN_1
+Wire Wire Line
+	11750 4000 11000 4000
+Text Label 11000 4250 0    50   ~ 0
+MOTOR_2_SPIN_2
+Wire Wire Line
+	11750 4250 11000 4250
+Text Label 11000 6250 0    50   ~ 0
+MOTOR_3_SPIN_1
+Wire Wire Line
+	11750 6250 11000 6250
+Text Label 11000 6500 0    50   ~ 0
+MOTOR_3_SPIN_2
+Wire Wire Line
+	11750 6500 11000 6500
+NoConn ~ 9400 4700
+NoConn ~ 9400 4850
+Wire Wire Line
+	7250 3650 8000 3650
+Wire Wire Line
+	7250 3500 8000 3500
+Text Label 7250 3500 0    50   ~ 0
+MC_DIN_6
+Text Label 7250 3650 0    50   ~ 0
+MC_DIN_5
+Wire Wire Line
+	7250 3800 8000 3800
+Text Label 7250 3350 0    50   ~ 0
+MC_DIN_3
+Wire Wire Line
+	10000 3800 9400 3800
+Text Label 10000 3800 2    50   ~ 0
+DRIVE_MC_2
+Text Label 10250 4250 2    50   ~ 0
+MOTOR_1_SPIN_1
+Text Label 10250 3950 2    50   ~ 0
+MOTOR_1_SPIN_2
+Text Label 10250 3500 2    50   ~ 0
+MOTOR_2_SPIN_1
+Text Label 10250 3650 2    50   ~ 0
+MOTOR_2_SPIN_2
+Text Label 10250 3200 2    50   ~ 0
+MOTOR_3_SPIN_1
+Wire Wire Line
+	10250 4250 9400 4250
+Wire Wire Line
+	10250 3950 9400 3950
+Wire Wire Line
+	10250 3650 9400 3650
+Wire Wire Line
+	10250 3500 9400 3500
+Wire Wire Line
+	10250 3350 9400 3350
+Wire Wire Line
+	10250 3200 9400 3200
+Text Label 10250 3350 2    50   ~ 0
+MOTOR_3_SPIN_2
+$Comp
+L elements_2020:Драйвер_FET-IGBT_IR2103STRPBF DD2
+U 1 1 5F6D5F79
+P 7250 7000
+AR Path="/5F6D5F79" Ref="DD2"  Part="1" 
+AR Path="/5F33B5F7/5F6D5F79" Ref="DD?"  Part="1" 
+F 0 "DD2" H 7950 7100 50  0000 C CNN
+F 1 "Драйвер_FET-IGBT_IR2103STRPBF" H 7900 6600 50  0000 C CNN
+F 2 "N_DD:SO-8" H 7250 7000 50  0001 C CNN
+F 3 "" H 7250 7000 50  0001 C CNN
+	1    7250 7000
+	1    0    0    -1  
+$EndComp
+Text Label 8500 7750 2    50   ~ 0
+0(12V)_MC
+Text Label 8500 6250 2    50   ~ 0
+0(12V)_MC
+Wire Wire Line
+	8750 5500 8500 5500
+Connection ~ 7000 5500
+Wire Wire Line
+	7000 5500 7250 5500
+Wire Wire Line
+	7000 7000 7000 6750
+Wire Wire Line
+	7000 6750 8750 6750
+Wire Wire Line
+	8750 6750 8750 7000
+Wire Wire Line
+	8750 7000 8500 7000
+Connection ~ 7000 7000
+Wire Wire Line
+	7000 7000 7250 7000
+Wire Wire Line
+	7000 5250 8750 5250
+Wire Wire Line
+	7000 5250 7000 5500
+Wire Wire Line
+	8750 5250 8750 5500
+Text Label 9000 5700 2    50   ~ 0
+0(12V)_MC
+Text Label 9000 7200 2    50   ~ 0
+0(12V)_MC
+Wire Wire Line
+	9000 7200 8500 7200
+Wire Wire Line
+	9000 5700 8500 5700
 $EndSCHEMATC
