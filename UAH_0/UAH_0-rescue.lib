@@ -1,0 +1,432 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# AC-DC-преобразователь_IRM-10-15-elements_2020
+#
+DEF AC-DC-преобразователь_IRM-10-15-elements_2020 G 0 40 Y Y 1 F N
+F0 "G" 225 175 50 H V C CNN
+F1 "AC-DC-преобразователь_IRM-10-15-elements_2020" 325 -300 50 H V C CNN
+F2 "N_G:AC-DC_IRM-10-15" -50 0 50 H I C CNN
+F3 "" -50 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/irm-10-15" 350 -400 50 H I C CNN "LINK"
+F5 "220В/15В" 350 -200 50 H V C CNN "INFO"
+DRAW
+S 0 50 700 -250 0 1 0 N
+X +V +V 750 0 50 L 50 50 1 1 I
+X -V -V 750 -100 50 L 50 50 1 1 I
+X L L -50 0 50 R 50 50 1 1 I
+X N N -50 -200 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Check_point-elements_2020
+#
+DEF Check_point-elements_2020 X 0 40 Y Y 1 F N
+F0 "X" -25 100 50 H V C CNN
+F1 "Check_point-elements_2020" 50 -100 50 H V C CNN
+F2 "N_X:Пробник" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 0 50 0 1 0 N
+X ~ 1 -150 0 100 R 50 50 1 1 I
+X ~ 2 150 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# LOGO_NIKITOS_19х7-elements_2020
+#
+DEF LOGO_NIKITOS_19х7-elements_2020 X 0 40 Y Y 1 F N
+F0 "X" -75 125 50 H I C CNN
+F1 "LOGO_NIKITOS_19х7-elements_2020" -25 -100 50 H I C CNN
+F2 "N_ICO:el-nikitos_19x7" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "PCB_element" -25 225 50 H I C CNN "INFO"
+DRAW
+C 0 0 125 0 0 0 N
+T 0 0 0 50 0 0 0 LOGO Normal 0 C C
+ENDDRAW
+ENDDEF
+#
+# MOSFET_N-канал_AUIRF3205Z-elements_2020
+#
+DEF MOSFET_N-канал_AUIRF3205Z-elements_2020 VT 0 40 Y Y 1 F N
+F0 "VT" 250 125 50 H V C CNN
+F1 "MOSFET_N-канал_AUIRF3205Z-elements_2020" 225 -675 50 H V C CNN
+F2 "N_VD_HL:Транзистор_N_STP10NK60Z" 150 -550 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 -75 175 0 1 0 N
+P 2 0 0 0 0 -150 50 -150 N
+P 2 0 0 0 0 -125 0 -175 N
+P 2 0 0 0 0 -75 25 -100 N
+P 2 0 0 0 0 -75 25 -50 N
+P 2 0 0 0 0 -25 0 25 N
+P 3 0 0 0 0 -75 50 -75 50 -250 N
+P 3 0 0 0 50 100 50 0 0 0 N
+P 2 0 1 0 -150 -150 -25 -150 N
+P 2 0 1 0 -25 0 -25 -150 N
+P 2 0 1 0 0 -50 0 -100 N
+P 2 0 1 0 75 -50 125 -50 N
+P 4 0 1 0 50 75 100 75 100 -225 50 -225 N
+P 4 0 1 0 100 -50 75 -75 125 -75 100 -50 N
+X ~ 1 -200 -150 50 R 50 50 1 1 I
+X ~ 2 50 150 50 D 50 50 1 1 I
+X ~ 3 50 -300 50 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# MOSFET_N-канал_STD60N3LH5-elements_2020
+#
+DEF MOSFET_N-канал_STD60N3LH5-elements_2020 VT 0 40 Y Y 1 F N
+F0 "VT" 250 125 50 H V C CNN
+F1 "MOSFET_N-канал_STD60N3LH5-elements_2020" 225 -675 50 H V C CNN
+F2 "N_VD_HL:IGBT_dpak" 150 -550 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 -75 175 0 1 0 N
+P 2 0 0 0 0 -150 50 -150 N
+P 2 0 0 0 0 -125 0 -175 N
+P 2 0 0 0 0 -75 25 -100 N
+P 2 0 0 0 0 -75 25 -50 N
+P 2 0 0 0 0 -25 0 25 N
+P 3 0 0 0 0 -75 50 -75 50 -250 N
+P 3 0 0 0 50 100 50 0 0 0 N
+P 2 0 1 0 -150 -150 -25 -150 N
+P 2 0 1 0 -25 0 -25 -150 N
+P 2 0 1 0 0 -50 0 -100 N
+P 2 0 1 0 75 -50 125 -50 N
+P 4 0 1 0 50 75 100 75 100 -225 50 -225 N
+P 4 0 1 0 100 -50 75 -75 125 -75 100 -50 N
+X ~ 1 -200 -150 50 R 50 50 1 1 I
+X ~ 3 50 -300 50 U 50 50 1 1 I
+X ~ 4 50 150 50 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Диод_VS-20ETS08S-M3-elements_2020
+#
+DEF Диод_VS-20ETS08S-M3-elements_2020 VD 0 40 Y Y 1 F N
+F0 "VD" -125 175 50 V V C CNN
+F1 "Диод_VS-20ETS08S-M3-elements_2020" 275 -400 50 H V C CNN
+F2 "N_VD_HL:Транзистор_N-канал_dpak" 325 -200 50 H I C CNN
+F3 "" 0 -100 50 V I C CNN
+DRAW
+P 2 0 1 0 50 200 150 200 N
+P 2 0 1 0 100 200 100 250 N
+P 3 0 1 0 100 100 200 100 200 50 N
+P 4 0 1 0 50 150 150 150 100 200 50 150 N
+P 4 0 1 0 100 200 100 100 0 100 0 50 N
+X ~ 1 0 0 50 U 50 50 1 1 I
+X ~ 2 100 300 50 D 50 50 1 1 O
+X ~ 3 200 0 50 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Диод_шоттки_SK16-elements_2020
+#
+DEF Диод_шоттки_SK16-elements_2020 VD 0 40 Y Y 1 F N
+F0 "VD" 175 125 50 H V C CNN
+F1 "Диод_шоттки_SK16-elements_2020" 175 -125 50 H V C CNN
+F2 "N_VD_HL:Диод_SMB" 175 -225 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+F4 "1А, 60В" 175 -450 50 H I C CNN "INFO"
+F5 "https://www.chipdip.ru/product/sk16-diotec" 175 -325 50 H I C CNN "LINK"
+DRAW
+P 2 0 1 0 50 0 200 0 N
+P 2 0 1 0 175 -50 150 -50 N
+P 2 0 1 0 175 50 175 -50 N
+P 2 0 1 0 175 50 200 50 N
+P 2 0 1 0 200 0 250 0 N
+P 4 0 1 0 125 50 125 -50 175 0 125 50 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 2 300 0 50 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Драйвер_FET-IGBT_IR2103STRPBF-elements_2020
+#
+DEF Драйвер_FET-IGBT_IR2103STRPBF-elements_2020 DD 0 40 Y Y 1 F N
+F0 "DD" 900 100 50 H V C CNN
+F1 "Драйвер_FET-IGBT_IR2103STRPBF-elements_2020" 625 -425 50 H V C CNN
+F2 "N_DD:SO-8" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+T 0 625 -100 50 0 0 0 FET-IGBT Normal 0 C C
+T 0 625 0 50 0 0 0 Драйвер Normal 0 C C
+S 400 50 850 -350 0 0 0 N
+S 100 50 400 -350 0 1 0 N
+S 100 50 400 -350 0 1 0 N
+S 850 50 1150 -350 0 1 0 N
+X VCC 1 0 0 100 R 50 50 1 1 I
+X H_IN 2 0 -100 100 R 50 50 1 1 I
+X L_IN 3 0 -200 100 R 50 50 1 1 I
+X COM 4 0 -300 100 R 50 50 1 1 I
+X L_OUT 5 1250 -300 100 L 50 50 1 1 I
+X VS 6 1250 -200 100 L 50 50 1 1 I
+X H_OUT 7 1250 -100 100 L 50 50 1 1 I
+X VB 8 1250 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Дроссель_B82731-T2451-A20_2х47мГн_0.45А_250В-elements_2020
+#
+DEF Дроссель_B82731-T2451-A20_2х47мГн_0.45А_250В-elements_2020 L 0 40 Y Y 1 F N
+F0 "L" 125 125 50 H V C CNN
+F1 "Дроссель_B82731-T2451-A20_2х47мГн_0.45А_250В-elements_2020" 100 -400 50 H V C CNN
+F2 "N_RLC:Дроссель_B82731" 90 -190 50 V I C CNN
+F3 "" 90 -190 50 V I C CNN
+DRAW
+A 80 -190 32 716 -716 0 1 0 N 90 -160 90 -220
+A 80 -130 32 716 -716 0 1 0 N 90 -100 90 -160
+A 80 -70 32 716 -716 0 1 0 N 90 -40 90 -100
+A 180 -190 32 -1084 1084 0 1 0 N 170 -220 170 -160
+A 180 -130 32 -1084 1084 0 1 0 N 170 -160 170 -100
+A 180 -70 32 -1084 1084 0 1 0 N 170 -100 170 -40
+P 2 0 1 0 130 -40 130 -220 N
+P 2 0 1 0 172 -220 172 -250 N
+P 3 0 1 0 90 -220 90 -250 50 -250 N
+P 3 0 1 0 90 -40 90 0 50 0 N
+P 3 0 1 0 170 -40 170 0 185 0 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 3 250 0 75 L 50 50 1 1 I
+X ~ 4 250 -250 75 L 50 50 1 1 I
+X ~ 6 0 -250 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020
+#
+DEF Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020 XТ 0 40 Y Y 1 F N
+F0 "XТ" -300 350 60 H V C CNN
+F1 "Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020" -310 -260 60 H I C CNN
+F2 "N_X:Клеммник_х2_шаг5" -575 275 60 H I C CNN
+F3 "" -575 275 60 H I C CNN
+DRAW
+C -500 250 25 0 0 0 N
+C 0 -150 10 0 0 0 N
+C 0 0 10 0 0 0 N
+T 0 -500 50 50 0 0 0 1 Normal 0 C C
+T 0 -500 -100 50 0 0 0 2 Normal 0 C C
+T 0 -500 175 50 0 0 0 Конт. Normal 0 C C
+T 0 -200 200 50 0 0 0 Цепь Normal 0 C C
+S -600 100 -400 300 0 0 0 N
+S -400 300 0 100 0 0 0 N
+S -400 -200 -600 -50 0 1 0 N
+S -400 -50 -600 100 0 1 0 N
+P 2 0 0 0 -525 250 -550 250 N
+P 2 0 0 0 -475 250 -450 250 N
+P 2 0 0 0 -400 -200 0 -200 N
+P 2 0 0 0 -400 -50 0 -50 N
+P 2 0 0 0 0 -160 0 -200 N
+P 2 0 0 0 0 -140 0 -50 N
+P 2 0 0 0 0 -50 0 -10 N
+P 2 0 0 0 0 10 0 100 N
+X ~ 1 0 0 0 L 50 50 1 1 B N
+X ~ 2 0 -150 0 L 50 50 1 1 B N
+ENDDRAW
+ENDDEF
+#
+# Конденсатор_16В_0.1_мкФ+-10проц.-MOTOR_2020_import
+#
+DEF Конденсатор_16В_0.1_мкФ+-10проц.-MOTOR_2020_import C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "Конденсатор_16В_0.1_мкФ+-10проц.-MOTOR_2020_import" -50 -250 60 H I C CNN
+F2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" -100 -150 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "0,1 мкФ" 25 -100 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product0/9000591947" -125 250 50 H I C CNN "LINK"
+DRAW
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Конденсатор_16В_10_мкФ+-10проц.-MOTOR_2020_import
+#
+DEF Конденсатор_16В_10_мкФ+-10проц.-MOTOR_2020_import C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "Конденсатор_16В_10_мкФ+-10проц.-MOTOR_2020_import" -50 -250 60 H I C CNN
+F2 "MOTOR_RLC:Конденсатор_SMD_0805" -100 -150 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "10 мкФ" 25 -100 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product/grm21br61c106ke15l" -125 250 50 H I C CNN "LINK"
+DRAW
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Конденсатор_К10-83-25В-0,1_мкФ+-20проц.-MOTOR_2020_components
+#
+DEF Конденсатор_К10-83-25В-0,1_мкФ+-20проц.-MOTOR_2020_components C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "Конденсатор_К10-83-25В-0,1_мкФ+-20проц.-MOTOR_2020_components" -50 -250 60 H I C CNN
+F2 "MOTOR_RLC:Конденсатор_SMD_0805" -100 -150 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "0805" 0 300 50 H I C CNN "Типоразмер"
+F5 "0,1 мкФ" 25 -100 50 H V C CNN "Номинал"
+F6 "С108" 25 -350 50 H I C CNN "Обозначение УГО"
+F7 "АЖЯР.673511.008 ТУ" -25 400 50 H I C CNN "TY"
+DRAW
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components
+#
+DEF Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components" -50 -250 60 H I C CNN
+F2 "MOTOR_RLC:Конденсатор_тантал_SMD_m7343" -100 -150 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "m7343" 400 100 50 H I C CNN "Типоразмер"
+F5 "22 мкФ" 400 200 50 H I C CNN "Номинал"
+F6 "С226" 50 -100 50 H V C CNN "Обозначение УГО"
+DRAW
+P 2 0 1 0 -100 75 -50 75 N
+P 2 0 1 0 -75 50 -75 100 N
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Крепежное_отверстие_М3-MOTOR_2020_components
+#
+DEF Крепежное_отверстие_М3-MOTOR_2020_components X 0 40 Y Y 1 F N
+F0 "X" -75 125 50 H I C CNN
+F1 "Крепежное_отверстие_М3-MOTOR_2020_components" -25 -125 50 H I C CNN
+F2 "MOTOR_ICO:Крепежное_Отверстие_под_М3" -75 225 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "PCB_element" 0 -200 50 H I C CNN "INFO"
+DRAW
+C 0 0 50 0 1 0 N
+T 0 100 -75 50 0 0 0 М3 Normal 0 C C
+P 2 0 1 0 0 0 -100 0 N
+P 2 0 1 0 0 100 0 -100 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Предохранитель_MF-MSMF160_1,6А_1812-elements_2020
+#
+DEF Предохранитель_MF-MSMF160_1,6А_1812-elements_2020 FU 0 40 Y Y 1 F N
+F0 "FU" -25 150 60 H V C CNN
+F1 "Предохранитель_MF-MSMF160_1,6А_1812-elements_2020" 0 -150 60 H V C CNN
+F2 "N_RLC:Предохранитель_SMD_1812" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -200 75 200 -75 0 1 0 N
+P 2 0 1 0 -200 0 200 0 N
+X ~ 1 -300 0 100 R 50 50 1 1 I
+X ~ 2 300 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Резистор_10_кОм±5%_0,1Вт-MOTOR_2020_import
+#
+DEF Резистор_10_кОм±5%_0,1Вт-MOTOR_2020_import R 0 40 Y Y 1 F N
+F0 "R" 275 150 60 H V C CNN
+F1 "Резистор_10_кОм±5%_0,1Вт-MOTOR_2020_import" 325 -225 60 H I C CNN
+F2 "MOTOR_RLC:Резистор_SMD_0603-0,075_Вт" -150 -325 60 H I C CNN
+F3 "" 300 0 60 H I C CNN
+F4 "10 кОм" 300 -125 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product0/65097" 250 250 50 H I C CNN "LINK"
+DRAW
+S 100 75 500 -75 0 1 0 N
+P 2 0 1 0 300 50 200 -50 N
+P 2 0 1 0 350 50 250 -50 N
+P 2 0 1 0 400 50 300 -50 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+X ~ 2 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Резистор_Р1-12-0,125-120_Ом±5%-Н-«А»-MOTOR_2020_components
+#
+DEF Резистор_Р1-12-0,125-120_Ом±5%-Н-«А»-MOTOR_2020_components R 0 40 Y Y 1 F N
+F0 "R" 275 150 60 H V C CNN
+F1 "Резистор_Р1-12-0,125-120_Ом±5%-Н-«А»-MOTOR_2020_components" 625 -250 60 H I C CNN
+F2 "MOTOR_RLC:Резистор_SMD_0805_0,125Вт" 750 -350 60 H I C CNN
+F3 "" 300 0 60 H I C CNN
+F4 "0805" 300 0 50 H I C CNN "Типоразмер"
+F5 "120 Ом" 300 -150 50 H V C CNN "Номинал"
+F6 "ШКАБ.434110.002ТУ " 300 275 50 H I C CNN "TY"
+DRAW
+S 100 75 500 -75 0 1 0 N
+P 2 0 1 0 300 50 200 -50 N
+P 2 0 1 0 400 50 300 -50 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+X ~ 2 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Резистор_Р1-12-0,125-270_Ом±5%-Н-«А»-MOTOR_2020_components
+#
+DEF Резистор_Р1-12-0,125-270_Ом±5%-Н-«А»-MOTOR_2020_components R 0 40 Y Y 1 F N
+F0 "R" 275 150 60 H V C CNN
+F1 "Резистор_Р1-12-0,125-270_Ом±5%-Н-«А»-MOTOR_2020_components" 625 -250 60 H I C CNN
+F2 "MOTOR_RLC:Резистор_SMD_0805_0,125Вт" 750 -350 60 H I C CNN
+F3 "" 300 0 60 H I C CNN
+F4 "0805" 300 0 50 H I C CNN "Типоразмер"
+F5 "270 Ом" 300 -150 50 H V C CNN "Номинал"
+F6 "ШКАБ.434110.002ТУ " 300 275 50 H I C CNN "TY"
+DRAW
+S 100 75 500 -75 0 1 0 N
+P 2 0 1 0 300 50 200 -50 N
+P 2 0 1 0 400 50 300 -50 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+X ~ 2 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Резистор_Р1-12-0,1_ум.-240_Ом±5%-Н-«А»-MOTOR_2020_components
+#
+DEF Резистор_Р1-12-0,1_ум.-240_Ом±5%-Н-«А»-MOTOR_2020_components R 0 40 Y Y 1 F N
+F0 "R" 275 150 60 H V C CNN
+F1 "Резистор_Р1-12-0,1_ум.-240_Ом±5%-Н-«А»-MOTOR_2020_components" 325 -225 60 H I C CNN
+F2 "MOTOR_RLC:Резистор_SMD_0603-0,075_Вт" -150 -325 60 H I C CNN
+F3 "" 300 0 60 H I C CNN
+F4 "0603" 300 0 50 H I C CNN "Типоразмер"
+F5 "240 Ом" 300 -125 50 H V C CNN "Номинал"
+F6 "ШКАБ.434110.002ТУ " 275 250 50 H I C CNN "TY"
+DRAW
+S 100 75 500 -75 0 1 0 N
+P 2 0 1 0 300 50 200 -50 N
+P 2 0 1 0 350 50 250 -50 N
+P 2 0 1 0 400 50 300 -50 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+X ~ 2 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Стабилитрон_1N5352BRLG_вертикальный-elements_2020
+#
+DEF Стабилитрон_1N5352BRLG_вертикальный-elements_2020 VD 0 40 Y Y 1 F N
+F0 "VD" 175 125 39 H V C CNN
+F1 "Стабилитрон_1N5352BRLG_вертикальный-elements_2020" 175 -225 39 H I C CNN
+F2 "N_VD_HL:стабилитрон_DO-201_вертикальный" 150 -325 39 H I C CNN
+F3 "" -100 0 39 H I C CNN
+F4 "15 В" 150 -150 39 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product/1n5352brlg-2" 150 -425 50 H I C CNN "LINK"
+DRAW
+P 2 0 1 0 50 0 200 0 N
+P 2 0 1 0 175 -75 175 0 N
+P 2 0 1 0 175 75 150 75 N
+P 2 0 1 0 175 75 175 0 N
+P 2 0 1 0 200 0 250 0 N
+P 4 0 1 0 125 50 125 -50 175 0 125 50 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 2 300 0 50 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+#End Library

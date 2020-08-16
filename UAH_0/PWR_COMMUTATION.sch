@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:UAH_0-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -26,7 +26,7 @@ Text HLabel 1500 1500 0    50   Input ~ 0
 12V
 Connection ~ 6700 2350
 $Comp
-L elements_2020:Диод_шоттки_SK16 VD5
+L UAH_0-rescue:Диод_шоттки_SK16-elements_2020 VD5
 U 1 1 5F301077
 P 9200 2250
 AR Path="/5F33B5F7/5F301077" Ref="VD5"  Part="1" 
@@ -36,13 +36,13 @@ F 0 "VD15" V 9300 2400 50  0000 C CNN
 F 1 "Диод_шоттки_SK16" V 9450 2650 50  0000 C CNN
 F 2 "N_VD_HL:Диод_SMB" H 9375 2025 50  0001 C CNN
 F 3 "https://static.chipdip.ru/lib/046/DOC003046730.pdf" H 9100 2250 50  0001 C CNN
-F 4 "1А, 60В" H 9375 1800 50  0001 C CNN "INFO"
+F 4 "1А, 60В, SMB" H 9375 1800 50  0001 C CNN "INFO"
 F 5 "https://www.chipdip.ru/product/sk16-diotec" H 9375 1925 50  0001 C CNN "LINK"
 	1    9200 2250
 	0    1    1    0   
 $EndComp
 $Comp
-L elements_2020:Диод_шоттки_SK16 VD3
+L UAH_0-rescue:Диод_шоттки_SK16-elements_2020 VD3
 U 1 1 5F308708
 P 8950 2550
 AR Path="/5F33B5F7/5F308708" Ref="VD3"  Part="1" 
@@ -52,7 +52,7 @@ F 0 "VD13" V 9150 2400 50  0000 C CNN
 F 1 "Диод_шоттки_SK16" V 9000 2100 50  0000 C CNN
 F 2 "N_VD_HL:Диод_SMB" H 9125 2325 50  0001 C CNN
 F 3 "https://static.chipdip.ru/lib/046/DOC003046730.pdf" H 8850 2550 50  0001 C CNN
-F 4 "1А, 60В" H 9125 2100 50  0001 C CNN "INFO"
+F 4 "1А, 60В, SMB" H 9125 2100 50  0001 C CNN "INFO"
 F 5 "https://www.chipdip.ru/product/sk16-diotec" H 9125 2225 50  0001 C CNN "LINK"
 	1    8950 2550
 	0    1    -1   0   
@@ -80,7 +80,7 @@ F 0 "R18" V 9100 3950 60  0000 C CNN
 F 1 "Резистор_CF-100_10_Ом_1Вт" H 9200 3650 60  0001 C CNN
 F 2 "N_RLC:резистор_C1-4-1_Вт_вертикальный" H 9200 3800 60  0001 C CNN
 F 3 "" H 9200 3800 60  0001 C CNN
-F 4 "10 Ом" V 9250 4000 50  0000 C CNN "INFO"
+F 4 "10 Ом, С1-4" V 9250 4000 50  0000 C CNN "INFO"
 F 5 "https://www.chipdip.ru/product0/18265" H 9200 3800 50  0001 C CNN "LINK"
 	1    9200 3800
 	0    1    1    0   
@@ -133,6 +133,8 @@ F 0 "DA3" H 3900 5550 60  0000 C CNN
 F 1 "МОП-реле_КР293КП4_0" H 3600 6800 60  0000 C CNN
 F 2 "N_DD:DIP8" H -1900 9500 60  0001 C CNN
 F 3 "" H -1900 9500 60  0001 C CNN
+F 4 "МОП-реле, DIP8" H 3000 6600 50  0001 C CNN "INFO"
+F 5 "https://www.chipdip.ru/product/kr293kp4b" H 3000 6600 50  0001 C CNN "LINK"
 	1    3000 6600
 	1    0    0    1   
 $EndComp
@@ -143,7 +145,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 5750 4500 5700
 $Comp
-L elements_2020:MOSFET_N-канал_STD60N3LH5 VT4
+L UAH_0-rescue:MOSFET_N-канал_STD60N3LH5-elements_2020 VT4
 U 1 1 5F367D77
 P 4650 3100
 AR Path="/5F33B5F7/5F367D77" Ref="VT4"  Part="1" 
@@ -153,12 +155,13 @@ F 0 "VT12" H 4903 3071 50  0000 L CNN
 F 1 "MOSFET_N-канал_STD60N3LH5" H 4902 2980 50  0001 L CNN
 F 2 "N_VD_HL:IGBT_dpak" H 4800 2550 50  0001 C CNN
 F 3 "" H 4650 3100 50  0001 C CNN
-F 4 "DPAK" H 4903 2980 50  0000 L CNN "INFO"
+F 4 "48А, 30В, DPAK" H 4903 2980 50  0000 L CNN "INFO"
+F 5 "https://www.chipdip.ru/product/std60n3lh5" H 4650 3100 50  0001 C CNN "LINK"
 	1    4650 3100
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements_2020:MOSFET_N-канал_STD60N3LH5 VT5
+L UAH_0-rescue:MOSFET_N-канал_STD60N3LH5-elements_2020 VT5
 U 1 1 5F368662
 P 6750 1850
 AR Path="/5F33B5F7/5F368662" Ref="VT5"  Part="1" 
@@ -168,12 +171,13 @@ F 0 "VT13" H 6450 1900 50  0000 L CNN
 F 1 "MOSFET_N-канал_STD60N3LH5" H 7002 1730 50  0001 L CNN
 F 2 "N_VD_HL:IGBT_dpak" H 6900 1300 50  0001 C CNN
 F 3 "" H 6750 1850 50  0001 C CNN
-F 4 "DPAK" H 6450 1600 50  0000 L CNN "INFO"
+F 4 "48А, 30В, DPAK" H 6450 1600 50  0000 L CNN "INFO"
+F 5 "https://www.chipdip.ru/product/std60n3lh5" H 6750 1850 50  0001 C CNN "LINK"
 	1    6750 1850
 	-1   0    0    -1  
 $EndComp
 $Comp
-L elements_2020:MOSFET_N-канал_STD60N3LH5 VT3
+L UAH_0-rescue:MOSFET_N-канал_STD60N3LH5-elements_2020 VT3
 U 1 1 5F36A4CE
 P 4650 1850
 AR Path="/5F33B5F7/5F36A4CE" Ref="VT3"  Part="1" 
@@ -183,12 +187,13 @@ F 0 "VT11" H 4903 1821 50  0000 L CNN
 F 1 "MOSFET_N-канал_STD60N3LH5" H 4902 1730 50  0001 L CNN
 F 2 "N_VD_HL:IGBT_dpak" H 4800 1300 50  0001 C CNN
 F 3 "" H 4650 1850 50  0001 C CNN
-F 4 "DPAK" H 4903 1730 50  0000 L CNN "INFO"
+F 4 "48А, 30В, DPAK" H 4903 1730 50  0000 L CNN "INFO"
+F 5 "https://www.chipdip.ru/product/std60n3lh5" H 4650 1850 50  0001 C CNN "LINK"
 	1    4650 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements_2020:MOSFET_N-канал_STD60N3LH5 VT6
+L UAH_0-rescue:MOSFET_N-канал_STD60N3LH5-elements_2020 VT6
 U 1 1 5F36BCCD
 P 6750 3100
 AR Path="/5F33B5F7/5F36BCCD" Ref="VT6"  Part="1" 
@@ -198,7 +203,8 @@ F 0 "VT14" H 6450 3150 50  0000 L CNN
 F 1 "MOSFET_N-канал_STD60N3LH5" H 7002 2980 50  0001 L CNN
 F 2 "N_VD_HL:IGBT_dpak" H 6900 2550 50  0001 C CNN
 F 3 "" H 6750 3100 50  0001 C CNN
-F 4 "DPAK" H 6450 2850 50  0000 L CNN "INFO"
+F 4 "48А, 30В, DPAK" H 6450 2850 50  0000 L CNN "INFO"
+F 5 "https://www.chipdip.ru/product/std60n3lh5" H 6750 3100 50  0001 C CNN "LINK"
 	1    6750 3100
 	-1   0    0    -1  
 $EndComp
@@ -227,7 +233,7 @@ CHANNEL_2
 Text Label 7700 2000 2    50   ~ 0
 CHANNEL_2
 $Comp
-L MOTOR_2020_components:Резистор_Р1-12-0,125-270_Ом±5%-Н-«А» R10
+L UAH_0-rescue:Резистор_Р1-12-0,125-270_Ом±5%-Н-«А»-MOTOR_2020_components R10
 U 1 1 5F3853B5
 P 1900 6000
 AR Path="/5F33B5F7/5F3853B5" Ref="R10"  Part="1" 
@@ -240,11 +246,13 @@ F 3 "${MOTOR_2020_LIB}\\documentation\\Р1-12_СП.pdf" H 2200 6000 60  0001 C C
 F 4 "0805" H 2200 6000 50  0001 C CNN "Типоразмер"
 F 5 "270 Ом" H 2200 5850 50  0000 C CNN "Номинал"
 F 6 "ШКАБ.434110.002ТУ " H 2200 6275 50  0001 C CNN "TY"
+F 7 "270 Ом, 0805" H 1900 6000 50  0001 C CNN "INFO"
+F 8 "https://www.chipdip.ru/product0/9000079472" H 1900 6000 50  0001 C CNN "LINK"
 	1    1900 6000
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOTOR_2020_components:Резистор_Р1-12-0,125-270_Ом±5%-Н-«А» R11
+L UAH_0-rescue:Резистор_Р1-12-0,125-270_Ом±5%-Н-«А»-MOTOR_2020_components R11
 U 1 1 5F3994C2
 P 1900 6450
 AR Path="/5F33B5F7/5F3994C2" Ref="R11"  Part="1" 
@@ -257,6 +265,8 @@ F 3 "${MOTOR_2020_LIB}\\documentation\\Р1-12_СП.pdf" H 2200 6450 60  0001 C C
 F 4 "0805" H 2200 6450 50  0001 C CNN "Типоразмер"
 F 5 "270 Ом" H 2200 6300 50  0000 C CNN "Номинал"
 F 6 "ШКАБ.434110.002ТУ " H 2200 6725 50  0001 C CNN "TY"
+F 7 "270 Ом, 0805" H 1900 6450 50  0001 C CNN "INFO"
+F 8 "https://www.chipdip.ru/product0/9000079472" H 1900 6450 50  0001 C CNN "LINK"
 	1    1900 6450
 	1    0    0    -1  
 $EndComp
@@ -302,7 +312,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 4250 4450 4250
 $Comp
-L elements_2020:Стабилитрон_1N5352BRLG_вертикальный VD6
+L UAH_0-rescue:Стабилитрон_1N5352BRLG_вертикальный-elements_2020 VD6
 U 1 1 5F47E81E
 P 9200 3050
 AR Path="/5F33B5F7/5F47E81E" Ref="VD6"  Part="1" 
@@ -312,14 +322,13 @@ F 0 "VD16" V 9388 2947 39  0000 R CNN
 F 1 "Стабилитрон_1N5352BRLG_вертикальный" H 9375 2825 39  0001 C CNN
 F 2 "N_VD_HL:стабилитрон_DO-201_вертикальный" H 9300 2700 39  0001 C CNN
 F 3 "https://static.chipdip.ru/lib/773/DOC002773472.pdf" H 9100 3050 39  0001 C CNN
-F 4 "" H 9250 2750 39  0001 C CNN "TY"
-F 5 "15 В" V 9313 2947 39  0000 R CNN "INFO"
-F 6 "https://www.chipdip.ru/product/1n5352brlg-2" V 9200 3050 50  0001 C CNN "LINK"
+F 4 "15 В" V 9313 2947 39  0000 R CNN "INFO"
+F 5 "https://www.chipdip.ru/product/1n5352brlg-2" V 9200 3050 50  0001 C CNN "LINK"
 	1    9200 3050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L elements_2020:Стабилитрон_1N5352BRLG_вертикальный VD4
+L UAH_0-rescue:Стабилитрон_1N5352BRLG_вертикальный-elements_2020 VD4
 U 1 1 5F480D7E
 P 8950 2750
 AR Path="/5F33B5F7/5F480D7E" Ref="VD4"  Part="1" 
@@ -329,14 +338,13 @@ F 0 "VD14" V 9050 2500 39  0000 L CNN
 F 1 "Стабилитрон_1N5352BRLG_вертикальный" H 9125 2525 39  0001 C CNN
 F 2 "N_VD_HL:стабилитрон_DO-201_вертикальный" H 9050 2400 39  0001 C CNN
 F 3 "https://static.chipdip.ru/lib/773/DOC002773472.pdf" H 8850 2750 39  0001 C CNN
-F 4 "" H 9000 2450 39  0001 C CNN "TY"
-F 5 "15 В" V 9150 2500 39  0000 L CNN "INFO"
-F 6 "https://www.chipdip.ru/product/1n5352brlg-2" V 8950 2750 50  0001 C CNN "LINK"
+F 4 "15 В" V 9150 2500 39  0000 L CNN "INFO"
+F 5 "https://www.chipdip.ru/product/1n5352brlg-2" V 8950 2750 50  0001 C CNN "LINK"
 	1    8950 2750
 	0    1    1    0   
 $EndComp
 $Comp
-L elements_2020:Check_point X8
+L UAH_0-rescue:Check_point-elements_2020 X8
 U 1 1 5F8038AF
 P 9200 1850
 AR Path="/5F33B5F7/5F8038AF" Ref="X8"  Part="1" 
@@ -346,6 +354,8 @@ F 0 "X12" V 9154 1938 50  0000 L CNN
 F 1 "Check_point" V 9245 1938 50  0000 L CNN
 F 2 "N_X:Пробник" H 9200 1850 50  0001 C CNN
 F 3 "" H 9200 1850 50  0001 C CNN
+F 4 "PCB_element" H 9200 1850 50  0001 C CNN "INFO"
+F 5 "-" H 9200 1850 50  0001 C CNN "LINK"
 	1    9200 1850
 	0    1    1    0   
 $EndComp
@@ -363,7 +373,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 1500 8200 2350
 $Comp
-L elements_2020:Check_point X9
+L UAH_0-rescue:Check_point-elements_2020 X9
 U 1 1 5F81281C
 P 9200 4400
 AR Path="/5F33B5F7/5F81281C" Ref="X9"  Part="1" 
@@ -373,6 +383,8 @@ F 0 "X13" V 9154 4488 50  0000 L CNN
 F 1 "Check_point" V 9245 4488 50  0000 L CNN
 F 2 "N_X:Пробник" H 9200 4400 50  0001 C CNN
 F 3 "" H 9200 4400 50  0001 C CNN
+F 4 "PCB_element" H 9200 4400 50  0001 C CNN "INFO"
+F 5 "-" H 9200 4400 50  0001 C CNN "LINK"
 	1    9200 4400
 	0    1    1    0   
 $EndComp
@@ -404,7 +416,7 @@ PULL_DOWN
 Wire Wire Line
 	4700 4250 5700 4250
 $Comp
-L MOTOR_2020_import:Конденсатор_16В_0.1_мкФ+-10проц. C?
+L UAH_0-rescue:Конденсатор_16В_0.1_мкФ+-10проц.-MOTOR_2020_import C?
 U 1 1 5F37B6E8
 P 4500 6400
 AR Path="/5F37B6E8" Ref="C?"  Part="1" 
@@ -415,13 +427,13 @@ F 0 "C31" V 4480 6488 60  0000 L CNN
 F 1 "Конденсатор_16В_0.1_мкФ+-10проц." H 4450 6150 60  0001 C CNN
 F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 4400 6250 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 4500 6400 60  0001 C CNN
-F 4 "0,1 мкФ" V 4578 6488 50  0000 L CNN "INFO"
+F 4 "0,1мкФ, 16В, 0603" V 4578 6488 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product0/9000591947" H 4375 6650 50  0001 C CNN "LINK"
 	1    4500 6400
 	0    1    1    0   
 $EndComp
 $Comp
-L MOTOR_2020_import:Конденсатор_16В_0.1_мкФ+-10проц. C?
+L UAH_0-rescue:Конденсатор_16В_0.1_мкФ+-10проц.-MOTOR_2020_import C?
 U 1 1 5F34D4AD
 P 4500 5800
 AR Path="/5F34D4AD" Ref="C?"  Part="1" 
@@ -432,13 +444,13 @@ F 0 "C30" V 4480 5888 60  0000 L CNN
 F 1 "Конденсатор_16В_0.1_мкФ+-10проц." H 4450 5550 60  0001 C CNN
 F 2 "MOTOR_RLC:Конденсатор_SMD_К10-83(0603)" H 4400 5650 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\IMPORT\\murata_smd_ceramic_cap.pdf" H 4500 5800 60  0001 C CNN
-F 4 "0,1 мкФ" V 4578 5888 50  0000 L CNN "INFO"
+F 4 "0,1мкФ, 16В, 0603" V 4578 5888 50  0000 L CNN "INFO"
 F 5 "https://www.chipdip.ru/product0/9000591947" H 4375 6050 50  0001 C CNN "LINK"
 	1    4500 5800
 	0    1    1    0   
 $EndComp
 $Comp
-L MOTOR_2020_import:Резистор_10_кОм±5%_0,1Вт R?
+L UAH_0-rescue:Резистор_10_кОм±5%_0,1Вт-MOTOR_2020_import R?
 U 1 1 5F3761F0
 P 6250 7100
 AR Path="/5F3761F0" Ref="R?"  Part="1" 
@@ -449,13 +461,13 @@ F 0 "R24" V 6600 6950 60  0000 C CNN
 F 1 "Резистор_10_кОм±5%_0,1Вт" H 6575 6875 60  0001 C CNN
 F 2 "MOTOR_RLC:Резистор_SMD_0603-0,075_Вт" H 6100 6775 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\Р1-12_СП.pdf" H 6550 7100 60  0001 C CNN
-F 4 "10 кОм" V 6450 6850 50  0000 C CNN "INFO"
+F 4 "10 кОм, 0603" V 6450 6850 50  0000 C CNN "INFO"
 F 5 "https://www.chipdip.ru/product0/65097" H 6500 7350 50  0001 C CNN "LINK"
 	1    6250 7100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MOTOR_2020_import:Резистор_10_кОм±5%_0,1Вт R?
+L UAH_0-rescue:Резистор_10_кОм±5%_0,1Вт-MOTOR_2020_import R?
 U 1 1 5F3734C7
 P 5500 7100
 AR Path="/5F3734C7" Ref="R?"  Part="1" 
@@ -466,7 +478,7 @@ F 0 "R23" V 5850 6950 60  0000 C CNN
 F 1 "Резистор_10_кОм±5%_0,1Вт" H 5825 6875 60  0001 C CNN
 F 2 "MOTOR_RLC:Резистор_SMD_0603-0,075_Вт" H 5350 6775 60  0001 C CNN
 F 3 "${MOTOR_2020_LIB}\\documentation\\Р1-12_СП.pdf" H 5800 7100 60  0001 C CNN
-F 4 "10 кОм" V 5700 6850 50  0000 C CNN "INFO"
+F 4 "10 кОм, 0603" V 5700 6850 50  0000 C CNN "INFO"
 F 5 "https://www.chipdip.ru/product0/65097" H 5750 7350 50  0001 C CNN "LINK"
 	1    5500 7100
 	0    -1   -1   0   
