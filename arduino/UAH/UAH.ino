@@ -11,7 +11,18 @@
 #define MOTOR_DRIVE     3
 #define HEAT_DRIVE      5
 
+#define DIO_1           19
+#define DIO_2           18
+#define DIO_3           17
+#define DIO_4           16
+#define DIO_5           15
+#define DIO_6           14
+
+
 void setup() {
+
+  pinMode(DIO_1, OUTPUT);
+  digitalWrite(DIO_1, HIGH);
 
   digitalWrite(MOTOR_1_SPIN_1, LOW);
   digitalWrite(MOTOR_1_SPIN_2, LOW);
