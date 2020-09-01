@@ -3,16 +3,21 @@ import processing.serial.*;
 Serial myPort; 
 rectButton  rectButton_ReadData,
             rectButton_SendData,
-            rectButton_WriteData;
+            rectButton_WriteData,
+            rectButton_LoadData,
+            rectButton_DefaultData,
+            rectButton_SaveData;
 
 boolean b_serial_port_is_opened_true = false;
 
 PGraphics  img_choose_port,
            img_input_data;
            
-int int_choosed_port_id = 0;
+int int_choosed_port_id = 0,
+    int_choosed_element_id = 0;
 
-String str_last_action = "ВЫБРАН ПОСЛЕДОВАТЕЛЬНЫЙ ПОРТ";
+String str_last_action = "ВЫБРАН ПОСЛЕДОВАТЕЛЬНЫЙ ПОРТ",
+       str_soft_version = "ver.A0.1.M9";
 
 void setup()  {
   size(800, 600);
@@ -21,14 +26,23 @@ void setup()  {
   img_choose_port = createGraphics(800, 600);
   img_input_data = createGraphics(800, 600);
   
-  rectButton_ReadData = new rectButton("Serial_ReadData", 0.1*width, 0.85*height, 0.25*width, 0.04*height, false);
-  rectButton_ReadData.str_name = "СЧИТАТЬ ДАННЫЕ";
+  rectButton_LoadData = new rectButton("Serial_LoadData", 0.05*width, 0.8*height, 0.26*width, 0.04*height, false, 1);
+  rectButton_LoadData.str_name = "ЗАГРУЗИТЬ ПАРАМЕТРЫ";
   
-  rectButton_SendData = new rectButton("Serial_SendData", (0.5-0.125)*width, 0.85*height, 0.25*width, 0.04*height, false);
-  rectButton_SendData.str_name = "ПЕРЕСЛАТЬ ДАННЫЕ";
+  rectButton_DefaultData = new rectButton("Serial_DefaultData", (0.5-0.13)*width, 0.8*height, 0.26*width, 0.04*height, false, 2);
+  rectButton_DefaultData.str_name = "СБРОСИТЬ ПАРАМЕТРЫ";
   
-  rectButton_WriteData = new rectButton("Serial_WriteData", (0.9-0.25)*width, 0.85*height, 0.25*width, 0.04*height, false);
-  rectButton_WriteData.str_name = "ЗАПИСАТЬ ДАННЫЕ";
+  rectButton_SaveData = new rectButton("Serial_SaveData", (0.95-0.26)*width, 0.8*height, 0.26*width, 0.04*height, false, 3);
+  rectButton_SaveData.str_name = "СОХРАНИТЬ ПАРАМЕТРЫ";
+  
+  rectButton_ReadData = new rectButton("Serial_ReadData", 0.05*width, 0.85*height, 0.26*width, 0.04*height, false, 4);
+  rectButton_ReadData.str_name = "СЧИТАТЬ С МК";
+  
+  rectButton_SendData = new rectButton("Serial_SendData", (0.5-0.13)*width, 0.85*height, 0.26*width, 0.04*height, false, 5);
+  rectButton_SendData.str_name = "ПЕРЕСЛАТЬ НА МК";
+  
+  rectButton_WriteData = new rectButton("Serial_WriteData", (0.95-0.26)*width, 0.85*height, 0.26*width, 0.04*height, false, 6);
+  rectButton_WriteData.str_name = "ЗАПИСАТЬ В EEPROM";
   
 }
 
@@ -45,6 +59,9 @@ void draw()  {
     rectButton_ReadData.draw_rectButton();
     rectButton_SendData.draw_rectButton();
     rectButton_WriteData.draw_rectButton();
+    rectButton_LoadData.draw_rectButton();
+    rectButton_SaveData.draw_rectButton();
+    rectButton_DefaultData.draw_rectButton();
   }
   
   
@@ -55,6 +72,13 @@ void mousePressed()  {
   rectButton_ReadData.click();
   rectButton_SendData.click();
   rectButton_WriteData.click();
+  rectButton_SaveData.click();
+  rectButton_LoadData.click();
+  rectButton_DefaultData.click();
+}
+
+void mouseMoved()  {
+  
 }
 
 void keyPressed()  {
@@ -120,6 +144,9 @@ void filling_img_input_data()  {
   img_input_data.text("ВЫБРАННЫЙ ПОСЛЕДОВАТЕЛЬНЫЙ ПОРТ: " + Serial.list()[int_choosed_port_id], width*0.5, height*0.05);
   img_input_data.fill(20, 20, 50);
   img_input_data.text("КРАЙНИЕ ДЕЙСТВИЯ: " + str_last_action, width*0.5, height*0.95);
+  
+  img_input_data.textAlign(RIGHT);
+  img_input_data.text( str_soft_version , width*0.98, height*0.98);
   
   img_input_data.endDraw();
   
