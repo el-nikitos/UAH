@@ -8,6 +8,34 @@ rectButton  rectButton_ReadData,
             rectButton_DefaultData,
             rectButton_SaveData;
 
+inputBox    inputBox_Devices,
+            inputBox_Device1, 
+            inputBox_Device2,
+            inputBox_Device3,
+            inputBox_Device4,
+            inputBox_Device5,
+            
+            inputBox_DelayTimes,
+            inputBox_Delay1,
+            inputBox_Delay2,
+            inputBox_Delay3,
+            inputBox_Delay4,
+            inputBox_Delay5,
+            
+            inputBox_WorkTimes,
+            inputBox_WorkTime1,
+            inputBox_WorkTime2,
+            inputBox_WorkTime3,
+            inputBox_WorkTime4,
+            inputBox_WorkTime5,
+            
+            inputBox_PWMFills,
+            inputBox_PWMFill1,
+            inputBox_PWMFill2,
+            inputBox_PWMFill3,
+            inputBox_PWMFill4,
+            inputBox_PWMFill5;
+
 boolean b_serial_port_is_opened_true = false;
 
 PGraphics  img_choose_port,
@@ -17,7 +45,7 @@ int int_choosed_port_id = 0,
     int_choosed_element_id = 0;
 
 String str_last_action = "ВЫБРАН ПОСЛЕДОВАТЕЛЬНЫЙ ПОРТ",
-       str_soft_version = "ver.A0.1.M9";
+       str_soft_version = "ver.A0.2.M9";
 
 void setup()  {
   size(800, 600);
@@ -44,6 +72,82 @@ void setup()  {
   rectButton_WriteData = new rectButton("Serial_WriteData", (0.95-0.26)*width, 0.85*height, 0.26*width, 0.04*height, false, 6);
   rectButton_WriteData.str_name = "ЗАПИСАТЬ В EEPROM";
   
+  //inputBox Devices
+  inputBox_Devices = new inputBox( (0.05)*width, 0.15*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_Devices.str_name = "УСТРОЙСТВА";
+  
+  inputBox_Device1 = new inputBox( (0.05)*width, 0.2*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_Device1.str_name = "МОТОР №1";
+  
+  inputBox_Device2 = new inputBox( (0.05)*width, 0.25*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_Device2.str_name = "МОТОР №2";
+  
+  inputBox_Device3 = new inputBox( (0.05)*width, 0.3*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_Device3.str_name = "МОТОР №3";
+  
+  inputBox_Device4 = new inputBox( (0.05)*width, 0.35*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_Device4.str_name = "НАГРЕВАТЕЛЬ";
+  
+  inputBox_Device5 = new inputBox( (0.05)*width, 0.4*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_Device5.str_name = "~МОТОР №3";
+  
+  //inputBox Delays
+  inputBox_DelayTimes = new inputBox( (0.28)*width, 0.15*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_DelayTimes.str_name = "ВРЕМЯ ПАУЗЫ";
+  
+  inputBox_Delay1 = new inputBox( (0.28)*width, 0.2*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_Delay1.str_name = "01.1";
+  
+  inputBox_Delay2 = new inputBox( (0.28)*width, 0.25*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_Delay2.str_name = "01.2";
+  
+  inputBox_Delay3 = new inputBox( (0.28)*width, 0.3*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_Delay3.str_name = "01.3";
+  
+  inputBox_Delay4 = new inputBox( (0.28)*width, 0.35*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_Delay4.str_name = "01.4";
+  
+  inputBox_Delay5 = new inputBox( (0.28)*width, 0.4*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_Delay5.str_name = "01.5";
+  
+  //inputBox WorkTimes
+  inputBox_WorkTimes = new inputBox( (0.51)*width, 0.15*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_WorkTimes.str_name = "ВРЕМЯ РАБОТЫ";
+  
+  inputBox_WorkTime1 = new inputBox( (0.51)*width, 0.2*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_WorkTime1.str_name = "02.1";
+  
+  inputBox_WorkTime2 = new inputBox( (0.51)*width, 0.25*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_WorkTime2.str_name = "02.2";
+  
+  inputBox_WorkTime3 = new inputBox( (0.51)*width, 0.3*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_WorkTime3.str_name = "02.3";
+  
+  inputBox_WorkTime4 = new inputBox( (0.51)*width, 0.35*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_WorkTime4.str_name = "02.4";
+  
+  inputBox_WorkTime5 = new inputBox( (0.51)*width, 0.4*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_WorkTime5.str_name = "02.5";
+  
+  //inputBox PWM Fills
+  inputBox_PWMFills = new inputBox( (0.74)*width, 0.15*height, 0.2*width, 0.04*height, false, 6);
+  inputBox_PWMFills.str_name = "МОЩНОСТЬ (%)";
+  
+  inputBox_PWMFill1 = new inputBox( (0.74)*width, 0.2*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_PWMFill1.str_name = "10.0";
+  
+  inputBox_PWMFill2 = new inputBox( (0.74)*width, 0.25*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_PWMFill2.str_name = "20.0";
+  
+  inputBox_PWMFill3 = new inputBox( (0.74)*width, 0.3*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_PWMFill3.str_name = "30.0";
+  
+  inputBox_PWMFill4 = new inputBox( (0.74)*width, 0.35*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_PWMFill4.str_name = "40.0";
+  
+  inputBox_PWMFill5 = new inputBox( (0.74)*width, 0.4*height, 0.2*width, 0.04*height, true, 6);
+  inputBox_PWMFill5.str_name = "50.0";
+
 }
 
 void draw()  {
@@ -62,6 +166,34 @@ void draw()  {
     rectButton_LoadData.draw_rectButton();
     rectButton_SaveData.draw_rectButton();
     rectButton_DefaultData.draw_rectButton();
+    
+    inputBox_Devices.draw_inputBox();
+    inputBox_Device1.draw_inputBox();
+    inputBox_Device2.draw_inputBox();
+    inputBox_Device3.draw_inputBox();
+    inputBox_Device4.draw_inputBox();
+    inputBox_Device5.draw_inputBox();
+    
+    inputBox_DelayTimes.draw_inputBox();
+    inputBox_Delay1.draw_inputBox();
+    inputBox_Delay2.draw_inputBox();
+    inputBox_Delay3.draw_inputBox();
+    inputBox_Delay4.draw_inputBox();
+    inputBox_Delay5.draw_inputBox();
+    
+    inputBox_WorkTimes.draw_inputBox();
+    inputBox_WorkTime1.draw_inputBox();
+    inputBox_WorkTime2.draw_inputBox();
+    inputBox_WorkTime3.draw_inputBox();
+    inputBox_WorkTime4.draw_inputBox();
+    inputBox_WorkTime5.draw_inputBox();
+    
+    inputBox_PWMFills.draw_inputBox();
+    inputBox_PWMFill1.draw_inputBox();
+    inputBox_PWMFill2.draw_inputBox();
+    inputBox_PWMFill3.draw_inputBox();
+    inputBox_PWMFill4.draw_inputBox();
+    inputBox_PWMFill5.draw_inputBox();
   }
   
   

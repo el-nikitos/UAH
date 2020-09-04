@@ -9,53 +9,49 @@ public class inputBox
   public String str_name = "no name",
                 str_thread;
   
-  public boolean  b_click = false,
-                  b_focus = false,
-                  b_withHook;
+  public boolean  b_focus = false,
+                  b_changable;
   
-  public inputBox(String str_thread, float float_X_coordinate, float float_Y_coordinate, float float_width, float float_height, boolean b_withHook, int int_global_ID)
+  public inputBox( float float_X_coordinate, float float_Y_coordinate, float float_width, float float_height, boolean b_changable, int int_global_ID)
   {
     this.int_X_coordinate = round( float_X_coordinate );
     this.int_Y_coordinate = round( float_Y_coordinate );
     this.int_width = round( float_width );
     this.int_height = round( float_height );
-    this.str_thread = str_thread;
-    this.b_withHook = b_withHook;
+    //this.str_thread = str_thread;
+    this.b_changable = b_changable;
     this.int_global_ID = int_global_ID;
   }
   
-  public int draw_rectButton()
-  {
+  public int draw_inputBox() {
     focus();
     
-    strokeWeight(3);
-    if (b_click == false)
-    {
+    strokeWeight(1);
       
-      if (b_focus == true)  {
-        fill(80, 80, 20); 
+    if ( (b_focus == true)&(b_changable == true) )  {
+      fill(160, 160, 40); 
+    }
+    else  {
+      if (b_changable == true)  {
+        fill(200);
       }
       else  {
-        fill(20);
+        fill(100);
       }
+    }
       
-    }
-    else
-    {
-      fill(100,150,100); 
-    }
     rect(int_X_coordinate, int_Y_coordinate, int_width, int_height);
     
-    fill(200);
+    if (b_changable == true)  {
+      fill(20);
+    }
+    else  {
+      fill(200);
+    }
+    
     textSize(int_height*2/3);
     textAlign(CENTER, CENTER);
     text(str_name, int_X_coordinate + int_width/2, int_Y_coordinate + int_height/2);
-    
-    if ( (b_click == true) & (b_withHook == false) )
-    {
-      b_click = false;
-      //delay(500);
-    }
     
     return int_global_ID;
   }
@@ -65,16 +61,6 @@ public class inputBox
       b_focus = true;
     }
     else { b_focus = false; }
-  }
-  
-  public void click()
-  {
-    if ( b_focus == true )
-    {
-      b_click = b_click^true;
-      
-      thread(str_thread);
-    }
   }
   
 }
