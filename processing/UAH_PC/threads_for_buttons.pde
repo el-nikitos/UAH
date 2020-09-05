@@ -12,13 +12,16 @@ void Serial_WriteData()  {
 }
 
 void Serial_LoadData()  {
+  load_user_property();
   str_last_action = "ЗАГРУЖЕНЫ СОХРАНЕННЫЕ ПАРАМЕТРЫ";
 }
 
 void Serial_DefaultData()  {
+  load_default_property();
   str_last_action = "ЗАГРУЖЕНЫ ПАРАМЕТРЫ ПО УМОЛЧАНИЮ";
 }
 
 void Serial_SaveData()  {
-  str_last_action = "ПАРАМЕТРЫ УСПЕШНО ЗАПИСАНЫ В EEPROM";
+  save_user_property();
+  str_last_action = "ПАРАМЕТРЫ УСПЕШНО СОХРАНЕНЫ";
 }

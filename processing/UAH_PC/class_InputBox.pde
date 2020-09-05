@@ -56,6 +56,15 @@ public class inputBox
     textAlign(CENTER, CENTER);
     text(str_name, int_X_coordinate + int_width/2, int_Y_coordinate + int_height/2);
     
+    if (b_changable == true)  {
+      if (b_value_x10 == true)  {
+          str_name = Float.toString( float(int_value)/10 );
+        }
+        else  {
+          str_name = Integer.toString( (int_value) );
+        }
+    }
+    
     return int_global_ID;
   }
   
@@ -98,14 +107,14 @@ public class inputBox
       
       
       if (int_value<0)  { int_value = 0; }
-      
+      /*
       if (b_value_x10 == true)  {
         str_name = Float.toString( float(int_value)/10 );
       }
       else  {
         str_name = Integer.toString( (int_value) );
       }
-      
+      */
     }    
   }
   

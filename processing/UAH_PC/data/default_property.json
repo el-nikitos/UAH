@@ -1,0 +1,17 @@
+{
+  "pwm_fill_2": 30,
+  "pwm_fill_1": 30,
+  "worktime_5": 30,
+  "worktime_2": 100,
+  "worktime_1": 100,
+  "worktime_4": 30,
+  "worktime_3": 30,
+  "delay_4": 0,
+  "delay_5": 0,
+  "pwm_fill_4": 50,
+  "pwm_fill_3": 30,
+  "pwm_fill_5": 30,
+  "delay_1": 20,
+  "delay_2": 20,
+  "delay_3": 20
+}

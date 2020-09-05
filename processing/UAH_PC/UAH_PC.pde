@@ -1,6 +1,10 @@
 import processing.serial.*;
 
 Serial myPort; 
+
+JSONObject  json_default_property = new JSONObject(),
+            json_user_property = new JSONObject();
+
 rectButton  rectButton_ReadData,
             rectButton_SendData,
             rectButton_WriteData,
@@ -45,7 +49,7 @@ int int_choosed_port_id = 0,
     int_choosed_element_id = 0;
 
 String str_last_action = "ВЫБРАН ПОСЛЕДОВАТЕЛЬНЫЙ ПОРТ",
-       str_soft_version = "ver.A0.3.M9";
+       str_soft_version = "ver.A0.4.M9";
 
 void setup()  {
   size(800, 600);
@@ -93,61 +97,35 @@ void setup()  {
   
   //inputBox Delays
   inputBox_DelayTimes = new inputBox( (0.28)*width, 0.15*height, 0.2*width, 0.04*height, false, false, 6);
-  inputBox_DelayTimes.str_name = "ВРЕМЯ ПАУЗЫ";
+  inputBox_DelayTimes.str_name = "ВРЕМЯ ПАУЗЫ, СЕК.";
   
   inputBox_Delay1 = new inputBox( (0.28)*width, 0.2*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_Delay1.str_name = "1.1";
-  
   inputBox_Delay2 = new inputBox( (0.28)*width, 0.25*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_Delay2.str_name = "1.2";
-  
   inputBox_Delay3 = new inputBox( (0.28)*width, 0.3*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_Delay3.str_name = "1.3";
-  
   inputBox_Delay4 = new inputBox( (0.28)*width, 0.35*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_Delay4.str_name = "1.4";
-  
   inputBox_Delay5 = new inputBox( (0.28)*width, 0.4*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_Delay5.str_name = "1.5";
   
   //inputBox WorkTimes
-  inputBox_WorkTimes = new inputBox( (0.51)*width, 0.15*height, 0.2*width, 0.04*height, false, false, 6);
-  inputBox_WorkTimes.str_name = "ВРЕМЯ РАБОТЫ";
+  inputBox_WorkTimes = new inputBox( (0.51)*width, 0.15*height, 0.22*width, 0.04*height, false, false, 6);
+  inputBox_WorkTimes.str_name = "ВРЕМЯ РАБОТЫ, СЕК.";
   
-  inputBox_WorkTime1 = new inputBox( (0.51)*width, 0.2*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_WorkTime1.str_name = "2.1";
-  
-  inputBox_WorkTime2 = new inputBox( (0.51)*width, 0.25*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_WorkTime2.str_name = "2.2";
-  
-  inputBox_WorkTime3 = new inputBox( (0.51)*width, 0.3*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_WorkTime3.str_name = "2.3";
-  
-  inputBox_WorkTime4 = new inputBox( (0.51)*width, 0.35*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_WorkTime4.str_name = "2.4";
-  
-  inputBox_WorkTime5 = new inputBox( (0.51)*width, 0.4*height, 0.2*width, 0.04*height, true, true, 6);
-  inputBox_WorkTime5.str_name = "2.5";
+  inputBox_WorkTime1 = new inputBox( (0.51)*width, 0.2*height, 0.22*width, 0.04*height, true, true, 6);
+  inputBox_WorkTime2 = new inputBox( (0.51)*width, 0.25*height, 0.22*width, 0.04*height, true, true, 6);
+  inputBox_WorkTime3 = new inputBox( (0.51)*width, 0.3*height, 0.22*width, 0.04*height, true, true, 6);
+  inputBox_WorkTime4 = new inputBox( (0.51)*width, 0.35*height, 0.22*width, 0.04*height, true, true, 6);
+  inputBox_WorkTime5 = new inputBox( (0.51)*width, 0.4*height, 0.22*width, 0.04*height, true, true, 6);
   
   //inputBox PWM Fills
-  inputBox_PWMFills = new inputBox( (0.74)*width, 0.15*height, 0.2*width, 0.04*height, false, false, 6);
-  inputBox_PWMFills.str_name = "МОЩНОСТЬ (%)";
+  inputBox_PWMFills = new inputBox( (0.76)*width, 0.15*height, 0.18*width, 0.04*height, false, false, 6);
+  inputBox_PWMFills.str_name = "МОЩНОСТЬ, %";
   
-  inputBox_PWMFill1 = new inputBox( (0.74)*width, 0.2*height, 0.2*width, 0.04*height, true, false, 6);
-  inputBox_PWMFill1.str_name = "10";
-  
-  inputBox_PWMFill2 = new inputBox( (0.74)*width, 0.25*height, 0.2*width, 0.04*height, true, false, 6);
-  inputBox_PWMFill2.str_name = "20";
-  
-  inputBox_PWMFill3 = new inputBox( (0.74)*width, 0.3*height, 0.2*width, 0.04*height, true, false, 6);
-  inputBox_PWMFill3.str_name = "30";
-  
-  inputBox_PWMFill4 = new inputBox( (0.74)*width, 0.35*height, 0.2*width, 0.04*height, true, false, 6);
-  inputBox_PWMFill4.str_name = "40";
-  
-  inputBox_PWMFill5 = new inputBox( (0.74)*width, 0.4*height, 0.2*width, 0.04*height, true, false, 6);
-  inputBox_PWMFill5.str_name = "50";
+  inputBox_PWMFill1 = new inputBox( (0.76)*width, 0.2*height, 0.18*width, 0.04*height, true, false, 6);
+  inputBox_PWMFill2 = new inputBox( (0.76)*width, 0.25*height, 0.18*width, 0.04*height, true, false, 6);
+  inputBox_PWMFill3 = new inputBox( (0.76)*width, 0.3*height, 0.18*width, 0.04*height, true, false, 6);
+  inputBox_PWMFill4 = new inputBox( (0.76)*width, 0.35*height, 0.18*width, 0.04*height, true, false, 6);
+  inputBox_PWMFill5 = new inputBox( (0.76)*width, 0.4*height, 0.18*width, 0.04*height, true, false, 6);
 
+  Serial_LoadData();
 }
 
 void draw()  {
@@ -311,11 +289,78 @@ void filling_img_input_data()  {
   img_input_data.text("КНОПКИ ДЕЙСТВИЙ С ПАРАМЕТРАМИ:", width*0.5, height*0.8);
   
   img_input_data.fill(20, 20, 50);
-  img_input_data.text("КРАЙНИЕ ДЕЙСТВИЯ: " + str_last_action, width*0.5, height*0.95);
+  img_input_data.text("КРАЙНИЕ ДЕЙСТВИЯ: " + str_last_action, width*0.5, height*0.96);
   
   img_input_data.textAlign(RIGHT);
-  img_input_data.text( str_soft_version , width*0.98, height*0.98);
+  img_input_data.text( str_soft_version , width*0.99, height*0.99);
   
   img_input_data.endDraw();
   
+}
+
+void save_user_property()  {
+  
+  json_user_property.setInt("delay_1", inputBox_Delay1.int_value);
+  json_user_property.setInt("delay_2", inputBox_Delay2.int_value);
+  json_user_property.setInt("delay_3", inputBox_Delay3.int_value);
+  json_user_property.setInt("delay_4", inputBox_Delay4.int_value);
+  json_user_property.setInt("delay_5", inputBox_Delay5.int_value);
+  
+  json_user_property.setInt("worktime_1", inputBox_WorkTime1.int_value);
+  json_user_property.setInt("worktime_2", inputBox_WorkTime2.int_value);
+  json_user_property.setInt("worktime_3", inputBox_WorkTime3.int_value);
+  json_user_property.setInt("worktime_4", inputBox_WorkTime4.int_value);
+  json_user_property.setInt("worktime_5", inputBox_WorkTime5.int_value);
+  
+  json_user_property.setInt("pwm_fill_1", inputBox_PWMFill1.int_value);
+  json_user_property.setInt("pwm_fill_2", inputBox_PWMFill2.int_value);
+  json_user_property.setInt("pwm_fill_3", inputBox_PWMFill3.int_value);
+  json_user_property.setInt("pwm_fill_4", inputBox_PWMFill4.int_value);
+  json_user_property.setInt("pwm_fill_5", inputBox_PWMFill5.int_value);
+
+  saveJSONObject(json_user_property, "data/user_property.json");
+}
+
+void load_default_property()  {
+  json_default_property = loadJSONObject("data/default_property.json");
+  
+  inputBox_Delay1.int_value = json_default_property.getInt("delay_1");
+  inputBox_Delay2.int_value = json_default_property.getInt("delay_2");
+  inputBox_Delay3.int_value = json_default_property.getInt("delay_3");
+  inputBox_Delay4.int_value = json_default_property.getInt("delay_4");
+  inputBox_Delay5.int_value = json_default_property.getInt("delay_5");
+  
+  inputBox_WorkTime1.int_value = json_default_property.getInt("worktime_1");
+  inputBox_WorkTime2.int_value = json_default_property.getInt("worktime_2");
+  inputBox_WorkTime3.int_value = json_default_property.getInt("worktime_3");
+  inputBox_WorkTime4.int_value = json_default_property.getInt("worktime_4");
+  inputBox_WorkTime5.int_value = json_default_property.getInt("worktime_5");
+  
+  inputBox_PWMFill1.int_value = json_default_property.getInt("pwm_fill_1");
+  inputBox_PWMFill2.int_value = json_default_property.getInt("pwm_fill_2");
+  inputBox_PWMFill3.int_value = json_default_property.getInt("pwm_fill_3");
+  inputBox_PWMFill4.int_value = json_default_property.getInt("pwm_fill_4");
+  inputBox_PWMFill5.int_value = json_default_property.getInt("pwm_fill_5");
+}
+
+void load_user_property()  {
+  json_user_property = loadJSONObject("data/user_property.json");
+  
+  inputBox_Delay1.int_value = json_user_property.getInt("delay_1");
+  inputBox_Delay2.int_value = json_user_property.getInt("delay_2");
+  inputBox_Delay3.int_value = json_user_property.getInt("delay_3");
+  inputBox_Delay4.int_value = json_user_property.getInt("delay_4");
+  inputBox_Delay5.int_value = json_user_property.getInt("delay_5");
+  
+  inputBox_WorkTime1.int_value = json_user_property.getInt("worktime_1");
+  inputBox_WorkTime2.int_value = json_user_property.getInt("worktime_2");
+  inputBox_WorkTime3.int_value = json_user_property.getInt("worktime_3");
+  inputBox_WorkTime4.int_value = json_user_property.getInt("worktime_4");
+  inputBox_WorkTime5.int_value = json_user_property.getInt("worktime_5");
+  
+  inputBox_PWMFill1.int_value = json_user_property.getInt("pwm_fill_1");
+  inputBox_PWMFill2.int_value = json_user_property.getInt("pwm_fill_2");
+  inputBox_PWMFill3.int_value = json_user_property.getInt("pwm_fill_3");
+  inputBox_PWMFill4.int_value = json_user_property.getInt("pwm_fill_4");
+  inputBox_PWMFill5.int_value = json_user_property.getInt("pwm_fill_5");
 }
