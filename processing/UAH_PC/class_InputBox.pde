@@ -99,7 +99,7 @@ public class inputBox
       
       //println( key );
       if (b_value_x10 == true)  {
-        if (int_value>250)  { int_value = 250; }
+        if (int_value>200)  { int_value = 200; }
       }
       else  {
         if (int_value>100)  { int_value = 100; }

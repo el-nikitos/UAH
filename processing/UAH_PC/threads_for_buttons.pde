@@ -13,7 +13,7 @@ void Serial_WriteData()  {
 
 void Serial_LoadData()  {
   load_user_property();
-  str_last_action = "ЗАГРУЖЕНЫ СОХРАНЕННЫЕ ПАРАМЕТРЫ";
+  str_last_action = "ЗАГРУЖЕНЫ СОХРАНЕННЫЕ ПАРАМЕТРЫ ПОЛЬЗОВАТЕЛЯ";
 }
 
 void Serial_DefaultData()  {
@@ -23,5 +23,5 @@ void Serial_DefaultData()  {
 
 void Serial_SaveData()  {
   save_user_property();
-  str_last_action = "ПАРАМЕТРЫ УСПЕШНО СОХРАНЕНЫ";
+  str_last_action = "ПАРАМЕТРЫ ПОЛЬЗОВАТЕЛЯ УСПЕШНО СОХРАНЕНЫ";
 }

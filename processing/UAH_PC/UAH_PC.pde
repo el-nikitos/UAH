@@ -279,19 +279,22 @@ void filling_img_input_data()  {
   
   img_input_data.text("ПОЛЯ ИЗМЕНЯЕМЫХ ПАРАМЕТРОВ:", width*0.5, height*0.13);
   img_input_data.text("ДЛЯ ВЫБОРА ИЗМЕНЯЕМОГО ПАРАМЕТРА НАВЕСТИ НА ПОЛЕ КУРСОР МЫШИ", width*0.5, height*0.55);
-  img_input_data.text("НАЖАТИЕ <BACKSPASE> ПРИВЕДЕТ К УДАЛЕНИЮ МЛАДШЕГО РАЗРЯДА ЗНАЧЕНИЯ", width*0.5, height*0.59);
+  img_input_data.text("НАЖАТИЕ <BACKSPACE> ПРИВЕДЕТ К УДАЛЕНИЮ МЛАДШЕГО РАЗРЯДА ЗНАЧЕНИЯ", width*0.5, height*0.59);
   img_input_data.text("НАЖАТИЕ <0>...<9> ПРИВЕДЕТ К ЗАПОЛНЕНИЮ МЛАДШЕГО РАЗРЯДА ЗНАЧЕНИЯ", width*0.5, height*0.63);
-  img_input_data.text("ЗНАЧЕНИЕ ПОЛЕЙ 'ВРЕМЯ...' НЕ МОЖЕТ ПРЕВЫШАТЬ '25.0' ", width*0.5, height*0.67);
-  img_input_data.text("ЗНАЧЕНИЕ ПОЛЯ 'МОЩНОСТЬ' НЕ МОЖЕТ ПРЕВЫШАТЬ '100' ", width*0.5, height*0.71);
+  img_input_data.text("ЗНАЧЕНИЕ ПОЛЕЙ 'ВРЕМЯ...' НЕ МОЖЕТ ПРЕВЫШАТЬ '20.0 СЕК.' ", width*0.5, height*0.67);
+  img_input_data.text("ЗНАЧЕНИЕ ПОЛЯ 'МОЩНОСТЬ' НЕ МОЖЕТ ПРЕВЫШАТЬ '100 %' ", width*0.5, height*0.71);
   
   img_input_data.line(0, height*0.75, width, height*0.75);
   
   img_input_data.text("КНОПКИ ДЕЙСТВИЙ С ПАРАМЕТРАМИ:", width*0.5, height*0.8);
   
+  img_input_data.line(0, height*0.93, width, height*0.93);
+  
   img_input_data.fill(20, 20, 50);
-  img_input_data.text("КРАЙНИЕ ДЕЙСТВИЯ: " + str_last_action, width*0.5, height*0.96);
+  img_input_data.text("КРАЙНИЕ ДЕЙСТВИЯ: " + str_last_action, width*0.5, height*0.97);
   
   img_input_data.textAlign(RIGHT);
+  img_input_data.textSize(height*0.02);
   img_input_data.text( str_soft_version , width*0.99, height*0.99);
   
   img_input_data.endDraw();
